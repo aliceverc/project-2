@@ -17,11 +17,25 @@
       <form data-js="form">
         <fieldset>
           <legend>Your question:</legend>
-          <textarea name="question" id="question" data-js="question"></textarea>
+          <textarea
+            name="question"
+            id="question"
+            data-js="question"
+            max-length="150"
+          ></textarea>
+          <div id="the-count">
+            <span id="current_count">0</span>
+            <span id="maximum_count">/150</span>
+          </div>
         </fieldset>
         <fieldset>
           <legend>Your answer:</legend>
-          <textarea name="answer" id="answer" data-js="answer"></textarea>
+          <textarea
+            name="answer"
+            id="answer"
+            data-js="answer"
+            max-length="150"
+          ></textarea>
         </fieldset>
         <fieldset>
           <legend>Tag:</legend>
