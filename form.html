@@ -8,19 +8,29 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="index.js" defer></script>
   </head>
-  <header class="header">
-    <h1 class="header__title">Add new cards</h1>
-  </header>
   <body>
-    <form action="">
-      <fieldset>
-        <input>
-            <label for="">Your question:</label>
-            <textarea name="" id=""></textarea>
-        </input>
-     </fieldset>
- 
-    </form>
+    <header class="header">
+      <h1 class="header__title">Add new cards</h1>
+    </header>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Your question:</legend>
+          <textarea name="question" id="question"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Your answer:</legend>
+          <textarea name="answer" id="answer"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Tag:</legend>
+          <input type="text" id="tag" />
+        </fieldset>
+        <div id="wrap_submit-button">
+          <button type="button" id="submit-button">Submit</button>
+        </div>
+      </form>
+    </main>
 
     <nav class="navigation">
       <ul class="navigation__list">
