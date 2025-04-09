@@ -1,0 +1,47 @@
+main {
+  padding-top: 150px;
+  padding-bottom: 90px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+legend {
+  color: var(--secondary);
+}
+
+fieldset {
+  height: 20vh;
+  border: 2px solid var(--secondary-light);
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
+textarea:focus {
+  border: 1px solid var(--secondary);
+  outline: none;
+}
+
+#tag {
+  border: 1px solid var(--secondary);
+  outline: none;
+}
+
+#wrap_submit-button {
+  display: flex;
+  justify-content: center;
+}
+#submit-button {
+  width: 30vw;
+  height: 7vh;
+  margin-top: 30px;
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary-light);
+}
+#submit-button:hover {
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: #fff;
+}
