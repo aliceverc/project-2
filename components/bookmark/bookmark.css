@@ -5,6 +5,9 @@
   border-radius: 50%;
   background: var(--secondary);
   color: var(--white);
+  display: flex;     
+  align-items: center; 
+  justify-content: center; /
 }
 
 .bookmark:hover {
@@ -15,7 +18,7 @@
   color: var(--black);
 }
 
-.bookmark__icon {
+.bookmark__icon path {
   fill: currentcolor;
   width: 2em;
   height: 2em;

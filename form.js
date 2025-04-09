@@ -48,12 +48,32 @@ form.addEventListener("submit", (event) => {
   buttonBookmark.classList.add("bookmark");
   buttonBookmark.setAttribute("aria-label", "bookmark");
   buttonBookmark.setAttribute("type", "button");
+  buttonBookmark.addEventListener("click", () => {
+    buttonBookmark.classList.toggle("bookmark--active");
+  });
 
-  const bookmarkIcon = document.createElement("svg");
+  const bookmarkIcon = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "svg"
+  );
   bookmarkIcon.classList.add("bookmark__icon");
   bookmarkIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
   bookmarkIcon.setAttribute("viewBox", "0 0 24 24");
-  bookmarkIcon.innerHTML = `<path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>`;
+  bookmarkIcon.setAttribute("width", "24");
+  bookmarkIcon.setAttribute("height", "24");
+  bookmarkIcon.setAttribute("fill", "currentColor");
+
+  // Create the <path> separately
+  const bookmarkPath = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "path"
+  );
+  bookmarkPath.setAttribute(
+    "d",
+    "M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+  );
+
+  bookmarkIcon.appendChild(bookmarkPath);
 
   const listItem = document.createElement("li");
   listItem.classList.add("card-list__item");
