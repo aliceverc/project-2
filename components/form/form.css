@@ -5,6 +5,10 @@ main {
   margin: 0 auto;
 }
 
+.card-list__item {
+  list-style: none;
+}
+
 legend {
   color: var(--secondary);
 }
@@ -37,6 +41,7 @@ textarea:focus {
   width: 30vw;
   height: 7vh;
   margin-top: 30px;
+  margin-bottom: 30px;
   border: 1px solid var(--secondary);
   background-color: var(--secondary-light);
 }
