@@ -1,8 +1,12 @@
 // Grab elements from the DOM
 const form = document.querySelector('[data-js="form"]');
-const question = document.querySelector('[data-js="question"]');
-const answer = document.querySelector('[data-js="answer"]');
 const tag = document.querySelector('[data-js="tag"]');
+
+const question = document.querySelector('[data-js="question"]');
+const questionCount = document.querySelector('[data-js="question-count"]');
+
+const answer = document.querySelector('[data-js="answer"]');
+const answerCount = document.querySelector('[data-js="answer-count"]');
 
 // Handle form submission
 form.addEventListener("submit", (event) => {
@@ -119,3 +123,14 @@ form.addEventListener("submit", (event) => {
   // Reset form fields
   event.target.reset();
 });
+
+// FORM FIELD TEXT COUNTER
+
+function updateCharacterCount(textarea, counterSpan) {
+  textarea.addEventListener("input", () => {
+    counterSpan.textContent = textarea.value.length;
+  });
+}
+
+updateCharacterCount(question, questionCount);
+updateCharacterCount(answer, answerCount);
